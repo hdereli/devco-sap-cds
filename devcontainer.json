@@ -1,0 +1,17 @@
+{
+	"name": "Node.js",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { "VARIANT": "16" }
+	},
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+        "sapse.vscode-cds",
+        "sapse.sap-ux-fiori-tools-extension-pack"
+	],
+	"forwardPorts": [4004],
+	"remoteUser": "node"
+}
