@@ -15,7 +15,7 @@ RUN curl -LJO https://raw.githubusercontent.com/SAP-samples/sap-tech-bytes/2021-
 ## Set permission
 RUN chmod +x getbtpcli
 
-## Copy script and add a -y flag to accept by default
+## Run Script (NOTE: Copy script and add a -y flag to accept license by default)
 RUN echo -ne '\n' | ./getbtpcli
 
 ## Add BTP to Path
