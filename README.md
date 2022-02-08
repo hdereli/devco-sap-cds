@@ -1,4 +1,4 @@
-# Dev container for SAP CDS development
+# Dev container for SAP CDS
 
 
 ### Based on the Hands-on SAP Dev

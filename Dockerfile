@@ -9,14 +9,8 @@ RUN apt-get update \
 
 RUN su node -c "npm install -g @ui5/cli @sap/cds-dk yo"
 
-## Download BTP Cli
-RUN curl -LJO https://raw.githubusercontent.com/SAP-samples/sap-tech-bytes/2021-09-01-btp-cli/getbtpcli
-
-## Set permission
-RUN chmod +x getbtpcli
-
-## Copy script and add a -y flag to accept by default
-RUN echo -ne '\n' | ./getbtpcli
+## Install BTP Cli
+RUN bash -c "echo -ne '\n' | bash <(curl -L https://raw.githubusercontent.com/SAP-samples/sap-tech-bytes/2021-09-01-btp-cli/getbtpcli)"
 
 ## Add BTP to Path
 ENV PATH "$PATH:./root/bin/"
